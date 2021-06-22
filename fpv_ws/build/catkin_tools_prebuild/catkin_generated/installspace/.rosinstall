@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/adi/Aerial_Robotics/ /fpv_ws/install/setup.sh
