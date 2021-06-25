@@ -179,7 +179,7 @@
     </camera>
   </xacro:macro>
 
-  Macro to add a multicamera (stereo pair).
+  <!-- Macro to add a multicamera (stereo pair). -->
   <xacro:macro name="stereo_camera_macro"
     params="namespace camera_name parent_link frame_rate
       horizontal_fov image_width image_height image_format min_distance
