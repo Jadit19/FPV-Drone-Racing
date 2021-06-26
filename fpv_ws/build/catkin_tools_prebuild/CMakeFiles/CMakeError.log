@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b3b0f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b3b0f.dir/build.make CMakeFiles/cmTC_b3b0f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9005d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9005d.dir/build.make CMakeFiles/cmTC_9005d.dir/build
 make[1]: Entering directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b3b0f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b3b0f.dir/CheckSymbolExists.c.o   -c /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_b3b0f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3b0f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b3b0f.dir/CheckSymbolExists.c.o  -o cmTC_b3b0f 
-CMakeFiles/cmTC_b3b0f.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_9005d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9005d.dir/CheckSymbolExists.c.o   -c /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9005d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9005d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_9005d.dir/CheckSymbolExists.c.o  -o cmTC_9005d 
+CMakeFiles/cmTC_9005d.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b3b0f.dir/build.make:97: recipe for target 'cmTC_b3b0f' failed
-make[1]: *** [cmTC_b3b0f] Error 1
+CMakeFiles/cmTC_9005d.dir/build.make:97: recipe for target 'cmTC_9005d' failed
+make[1]: *** [cmTC_9005d] Error 1
 make[1]: Leaving directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_b3b0f/fast' failed
-make: *** [cmTC_b3b0f/fast] Error 2
+Makefile:126: recipe for target 'cmTC_9005d/fast' failed
+make: *** [cmTC_9005d/fast] Error 2
 
 File /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72732/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72732.dir/build.make CMakeFiles/cmTC_72732.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_eef23/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eef23.dir/build.make CMakeFiles/cmTC_eef23.dir/build
 make[1]: Entering directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_72732.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_72732.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_72732
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72732.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_72732.dir/CheckFunctionExists.c.o  -o cmTC_72732 -lpthreads 
+Building C object CMakeFiles/cmTC_eef23.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eef23.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eef23
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eef23.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_eef23.dir/CheckFunctionExists.c.o  -o cmTC_eef23 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_72732.dir/build.make:97: recipe for target 'cmTC_72732' failed
-make[1]: *** [cmTC_72732] Error 1
+CMakeFiles/cmTC_eef23.dir/build.make:97: recipe for target 'cmTC_eef23' failed
+make[1]: *** [cmTC_eef23] Error 1
 make[1]: Leaving directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_72732/fast' failed
-make: *** [cmTC_72732/fast] Error 2
+Makefile:126: recipe for target 'cmTC_eef23/fast' failed
+make: *** [cmTC_eef23/fast] Error 2
 
 
