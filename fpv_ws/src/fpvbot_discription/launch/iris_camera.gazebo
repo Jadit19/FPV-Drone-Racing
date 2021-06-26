@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<robot xmlns:xacro="http://www.w3.org/">
+<robot name="$(arg mav_name)" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="$(find fpvbot_discription)/urdf/$(arg mav_name)_base.xacro" />
 
