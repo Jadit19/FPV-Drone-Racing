@@ -4,14 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/src/googletest/googletest/src/gtest-all.cc" "/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
-  "/usr/src/googletest/googlemock/src/gmock-all.cc" "/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+  "/usr/src/googletest/googletest/src/gtest-all.cc" "/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/gtest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
+  "/usr/src/googletest/googlemock/src/gmock-all.cc" "/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "GTEST_CREATE_SHARED_LIBRARY=1"
+  "LIBBULLET_VERSION=2.87"
+  "LIBBULLET_VERSION_GT_282"
   )
 
 # The include file search paths:

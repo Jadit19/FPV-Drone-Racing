@@ -1,4 +1,4 @@
-prefix=/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install
+prefix=/home/jadit19/FPV-Drone-Racing/fpv_ws/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

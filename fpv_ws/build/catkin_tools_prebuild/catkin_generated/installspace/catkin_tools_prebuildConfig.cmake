@@ -67,14 +67,14 @@ set(catkin_tools_prebuild_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(catkin_tools_prebuild_SOURCE_PREFIX /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild)
-  set(catkin_tools_prebuild_DEVEL_PREFIX /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild)
+  set(catkin_tools_prebuild_SOURCE_PREFIX /home/jadit19/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild)
+  set(catkin_tools_prebuild_DEVEL_PREFIX /home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild)
   set(catkin_tools_prebuild_INSTALL_PREFIX "")
   set(catkin_tools_prebuild_PREFIX ${catkin_tools_prebuild_DEVEL_PREFIX})
 else()
   set(catkin_tools_prebuild_SOURCE_PREFIX "")
   set(catkin_tools_prebuild_DEVEL_PREFIX "")
-  set(catkin_tools_prebuild_INSTALL_PREFIX /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install)
+  set(catkin_tools_prebuild_INSTALL_PREFIX /home/jadit19/FPV-Drone-Racing/fpv_ws/install)
   set(catkin_tools_prebuild_PREFIX ${catkin_tools_prebuild_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install/lib;/home/adi/ros/rotors_ws/devel/lib;/home/adi/ros/rotors_ws/devel/.private/catkin_tools_prebuild/lib;/media/adi/Adi/Aerial_Robotics/Tutorial/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/jadit19/FPV-Drone-Racing/fpv_ws/install/lib;/home/jadit19/ros/rotors_ws/devel/lib;/opt/ros/melodic/lib;/home/jadit19/tutorial_ws/devel/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

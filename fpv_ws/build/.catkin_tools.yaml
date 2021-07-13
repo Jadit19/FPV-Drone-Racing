@@ -1,6 +1,6 @@
-devel_space: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel
+devel_space: /home/jadit19/FPV-Drone-Racing/fpv_ws/devel
 install: false
-install_space: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install
+install_space: /home/jadit19/FPV-Drone-Racing/fpv_ws/install
 profile: default
-source_space: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src
-workspace: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws
+source_space: /home/jadit19/FPV-Drone-Racing/fpv_ws/src
+workspace: /home/jadit19/FPV-Drone-Racing/fpv_ws

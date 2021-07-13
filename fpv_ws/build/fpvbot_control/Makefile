@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_control
+CMAKE_SOURCE_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control
+CMAKE_BINARY_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

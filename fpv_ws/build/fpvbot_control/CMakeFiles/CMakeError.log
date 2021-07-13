@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp
+Change Dir: /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_615d1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_615d1.dir/build.make CMakeFiles/cmTC_615d1.dir/build
-make[1]: Entering directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_615d1.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_615d1.dir/CheckSymbolExists.c.o   -c /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_615d1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_615d1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_615d1.dir/CheckSymbolExists.c.o  -o cmTC_615d1 
-CMakeFiles/cmTC_615d1.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_3f36a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3f36a.dir/build.make CMakeFiles/cmTC_3f36a.dir/build
+make[1]: Entering directory '/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f36a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3f36a.dir/CheckSymbolExists.c.o   -c /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3f36a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f36a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3f36a.dir/CheckSymbolExists.c.o  -o cmTC_3f36a 
+CMakeFiles/cmTC_3f36a.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_615d1.dir/build.make:97: recipe for target 'cmTC_615d1' failed
-make[1]: *** [cmTC_615d1] Error 1
-make[1]: Leaving directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_615d1/fast' failed
-make: *** [cmTC_615d1/fast] Error 2
+CMakeFiles/cmTC_3f36a.dir/build.make:97: recipe for target 'cmTC_3f36a' failed
+make[1]: *** [cmTC_3f36a] Error 1
+make[1]: Leaving directory '/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3f36a/fast' failed
+make: *** [cmTC_3f36a/fast] Error 2
 
-File /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp
+Change Dir: /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2376f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2376f.dir/build.make CMakeFiles/cmTC_2376f.dir/build
-make[1]: Entering directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2376f.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2376f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2376f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2376f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2376f.dir/CheckFunctionExists.c.o  -o cmTC_2376f -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_7e524/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e524.dir/build.make CMakeFiles/cmTC_7e524.dir/build
+make[1]: Entering directory '/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e524.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7e524.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7e524
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e524.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7e524.dir/CheckFunctionExists.c.o  -o cmTC_7e524 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_2376f.dir/build.make:97: recipe for target 'cmTC_2376f' failed
-make[1]: *** [cmTC_2376f] Error 1
-make[1]: Leaving directory '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_2376f/fast' failed
-make: *** [cmTC_2376f/fast] Error 2
+CMakeFiles/cmTC_7e524.dir/build.make:97: recipe for target 'cmTC_7e524' failed
+make[1]: *** [cmTC_7e524] Error 1
+make[1]: Leaving directory '/home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7e524/fast' failed
+make: *** [cmTC_7e524/fast] Error 2
 
 

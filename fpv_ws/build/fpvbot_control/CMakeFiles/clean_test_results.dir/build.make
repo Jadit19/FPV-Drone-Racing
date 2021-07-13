@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_control
+CMAKE_SOURCE_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_control
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control
+CMAKE_BINARY_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbo
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/test_results
+	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_control /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_control /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_control /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_control /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_control/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install
+prefix=/home/jadit19/FPV-Drone-Racing/fpv_ws/install
 
 Name: fpvbot_discription
 Description: Description of fpvbot_discription
 Version: 0.0.0
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp rospy gazebo_msgs geometry_msgs mav_msgs sensor_msgs

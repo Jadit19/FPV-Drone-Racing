@@ -12,16 +12,16 @@ try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/adi/ros/rotors_ws/devel;/home/adi/ros/rotors_ws/devel/.private/catkin_tools_prebuild;/media/adi/Adi/Aerial_Robotics/Tutorial/devel;/opt/ros/melodic'.split(';'):
+    for workspace in '/home/jadit19/ros/rotors_ws/devel;/opt/ros/melodic;/home/jadit19/tutorial_ws/devel'.split(';'):
         python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild/env.sh')
+code = generate_environment_script('/home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild/env.sh')
 
-output_filename = '/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/catkin_generated/setup_cached.sh'
+output_filename = '/home/jadit19/FPV-Drone-Racing/fpv_ws/build/catkin_tools_prebuild/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

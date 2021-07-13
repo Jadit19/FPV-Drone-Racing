@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription
+CMAKE_SOURCE_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription
+CMAKE_BINARY_DIR = /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription
 
 # Utility rule file for roscpp_generate_messages_lisp.
 
@@ -67,6 +67,6 @@ CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 .PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 CMakeFiles/roscpp_generate_messages_lisp.dir/depend:
-	cd /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription /home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 

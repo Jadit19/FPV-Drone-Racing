@@ -1,1 +1,1 @@
-/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild/local_setup.bash
+/home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild/local_setup.bash

@@ -13,16 +13,16 @@ Not searching for unused variables given on the command line.
 [36m--[0m Detecting CXX compiler ABI info - done
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_discription
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel;/home/adi/ros/rotors_ws/devel;/home/adi/ros/rotors_ws/devel/.private/catkin_tools_prebuild;/media/adi/Adi/Aerial_Robotics/Tutorial/devel;/opt/ros/melodic
-[36m--[0m This workspace overlays: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel;/home/adi/ros/rotors_ws/devel;/home/adi/ros/rotors_ws/devel/.private/catkin_tools_prebuild;/media/adi/Adi/Aerial_Robotics/Tutorial/devel;/opt/ros/melodic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_discription
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/jadit19/FPV-Drone-Racing/fpv_ws/devel;/home/jadit19/ros/rotors_ws/devel;/opt/ros/melodic;/home/jadit19/tutorial_ws/devel
+[36m--[0m This workspace overlays: /home/jadit19/FPV-Drone-Racing/fpv_ws/devel;/home/jadit19/ros/rotors_ws/devel;/opt/ros/melodic;/home/jadit19/tutorial_ws/devel
 [36m--[0m Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python2
 [36m--[0m Using Debian Python package layout
 [36m--[0m Using empy: /usr/bin/empy
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/test_results
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription/test_results
 [36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
 [36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
 [36m--[0m Found PythonInterp: /usr/bin/python2 (found version "2.7.17")
@@ -40,4 +40,4 @@ Not searching for unused variables given on the command line.
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Configuring done
 [36m--[0m Generating done
-[36m--[0m Build files have been written to: /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription
+[36m--[0m Build files have been written to: /home/jadit19/FPV-Drone-Racing/fpv_ws/build/fpvbot_discription

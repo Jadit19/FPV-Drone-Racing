@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jadit19/FPV-Drone-Racing/fpv_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
