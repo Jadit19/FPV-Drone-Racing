@@ -56,6 +56,14 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
 
+  <!-- Copied from rotor_ws -->
+  <depend>cmake_modules</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>geometry_msgs</depend>
+  <depend>mav_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

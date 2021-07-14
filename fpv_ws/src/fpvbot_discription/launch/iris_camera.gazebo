@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<robot xmlns:xacro="http://www.w3.org/">
-
+<!-- <robot xmlns:xacro="http://www.w3.org/"> -->
+<robot name="$(arg mav_name)" xmlns:xacro="http://ros.org/wiki/xacro">
+    
 <xacro:include filename="$(find fpvbot_discription)/urdf/$(arg mav_name)_base.xacro" />
 
 <xacro:camera_macro
@@ -21,5 +22,35 @@
     <box size="0.02 0.02 0.02" />
     <origin xyz="0.1 0 0.01" rpy="0 0 0"/>
 </xacro:camera_macro>
+
+<xacro:odometry_plugin_macro
+    namespace="${namespace}"
+    odometry_sensor_suffix="1"
+    parent_link="${namespace}/base_link"
+    pose_topic="odometry_sensor1/pose"
+    pose_with_covariance_topic="odometry_sensor1/pose_with_covariance"
+    position_topic="odometry_sensor1/position"
+    transform_topic="odometry_sensor1/transform"
+    odometry_topic="odometry_sensor1/odometry"
+    parent_frame_id="world"
+    child_frame_id="${namespace}/odometry_sensor1"
+    mass_odometry_sensor="0.00001"
+    measurement_divisor="1"
+    measurement_delay="0"
+    unknown_delay="0.0"
+    noise_normal_position="0 0 0"
+    noise_normal_quaternion="0 0 0"
+    noise_normal_linear_velocity="0 0 0"
+    noise_normal_angular_velocity="0 0 0"
+    noise_uniform_position="0 0 0"
+    noise_uniform_quaternion="0 0 0"
+    noise_uniform_linear_velocity="0 0 0"
+    noise_uniform_angular_velocity="0 0 0"
+    enable_odometry_map="false"
+    odometry_map=""
+    image_scale="">
+    <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" /> <!-- [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] [kg m^2] -->
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </xacro:odometry_plugin_macro>
 
 </robot>

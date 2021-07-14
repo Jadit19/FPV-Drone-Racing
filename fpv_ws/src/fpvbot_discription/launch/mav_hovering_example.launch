@@ -24,12 +24,14 @@
   <group ns="$(arg mav_name)">
     <include file="$(find fpvbot_discription)/launch/spawn_mav.launch">
       <arg name="mav_name" value="$(arg mav_name)" />
+      <!-- <arg name="model" value="$(find fpvbot_discription)/urdf/mav_generic_odometry_sensor.gazebo" /> -->
       <arg name="model" value="$(find fpvbot_discription)/launch/iris_camera.gazebo" />
       <arg name="enable_logging" value="$(arg enable_logging)" />
       <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
       <arg name="log_file" value="$(arg log_file)"/>
     </include>
-    <node name="lee_position_controller_node" pkg="rotors_control" type="lee_position_controller_node" output="screen">
+    <!-- <node name="lee_position_controller_node" pkg="rotors_control" type="lee_position_controller_node" output="screen"> -->
+    <node name="lee_position_controller_node" pkg="fpvbot_control" type="lee_position_controller_node" output="screen">
       <rosparam command="load" file="$(find fpvbot_discription)/resource/lee_controller_$(arg mav_name).yaml" />
       <rosparam command="load" file="$(find fpvbot_discription)/resource/$(arg mav_name).yaml" />
       <remap from="odometry" to="odometry_sensor1/odometry" />

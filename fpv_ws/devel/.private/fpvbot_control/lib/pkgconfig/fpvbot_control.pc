@@ -1,8 +1,0 @@
-prefix=/home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_control
-
-Name: fpvbot_control
-Description: Description of fpvbot_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

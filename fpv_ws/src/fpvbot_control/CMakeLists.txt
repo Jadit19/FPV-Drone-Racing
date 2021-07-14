@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(fpvbot_control)
 
+add_definitions(-std=c++11)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
@@ -10,7 +12,14 @@ project(fpvbot_control)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  sensor_msgs
+  cmake_modules
+  geometry_msgs
+  mav_msgs
+  nav_msgs
 )
+
+find_package(Eigen3 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -102,10 +111,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES fpvbot_control
-#  CATKIN_DEPENDS roscpp rospy
-#  DEPENDS system_lib
+  INCLUDE_DIRS include ${Eigen3_INCLUDE_DIRS}
+  LIBRARIES lee_position_controller roll_pitch_yawrate_thrust_controller
+  CATKIN_DEPENDS geometry_msgs mav_msgs nav_msgs roscpp sensor_msgs
+  DEPENDS Eigen3
 )
 
 ###########
@@ -115,8 +124,9 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
+  ${Eigen3_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -203,3 +213,44 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_library(lee_position_controller
+  src/library/lee_position_controller.cpp
+)
+
+add_library(roll_pitch_yawrate_thrust_controller
+  src/library/roll_pitch_yawrate_thrust_controller.cpp
+)
+
+target_link_libraries(lee_position_controller ${catkin_LIBRARIES})
+add_dependencies(lee_position_controller ${catkin_EXPORTED_TARGETS})
+
+target_link_libraries(roll_pitch_yawrate_thrust_controller ${catkin_LIBRARIES})
+add_dependencies(roll_pitch_yawrate_thrust_controller ${catkin_EXPORTED_TARGETS})
+
+add_executable(lee_position_controller_node src/nodes/lee_position_controller_node.cpp)
+add_dependencies(lee_position_controller_node ${catkin_EXPORTED_TARGETS})
+target_link_libraries(lee_position_controller_node
+  lee_position_controller ${catkin_LIBRARIES})
+
+add_executable(roll_pitch_yawrate_thrust_controller_node
+  src/nodes/roll_pitch_yawrate_thrust_controller_node.cpp)
+add_dependencies(roll_pitch_yawrate_thrust_controller_node ${catkin_EXPORTED_TARGETS})
+target_link_libraries(roll_pitch_yawrate_thrust_controller_node
+  roll_pitch_yawrate_thrust_controller ${catkin_LIBRARIES})
+
+install(TARGETS lee_position_controller roll_pitch_yawrate_thrust_controller
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
+
+install(TARGETS lee_position_controller_node roll_pitch_yawrate_thrust_controller_node
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(
+  DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+)
