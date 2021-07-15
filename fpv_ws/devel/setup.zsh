@@ -1,0 +1,1 @@
+/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/catkin_tools_prebuild/setup.zsh

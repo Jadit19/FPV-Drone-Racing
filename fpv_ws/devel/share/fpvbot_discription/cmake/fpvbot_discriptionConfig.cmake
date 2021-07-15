@@ -1,0 +1,1 @@
+/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_discription/share/fpvbot_discription/cmake/fpvbot_discriptionConfig.cmake
