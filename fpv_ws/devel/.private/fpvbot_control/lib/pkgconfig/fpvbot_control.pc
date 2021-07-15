@@ -1,8 +1,0 @@
-prefix=/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_control
-
-Name: fpvbot_control
-Description: Description of fpvbot_control
-Version: 0.0.0
-Cflags: -I/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_control/include
-Libs: -L${prefix}/lib -llee_position_controller -lroll_pitch_yawrate_thrust_controller
-Requires: geometry_msgs mav_msgs nav_msgs roscpp sensor_msgs

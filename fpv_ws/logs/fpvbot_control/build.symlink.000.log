@@ -1,7 +1,0 @@
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/libroll_pitch_yawrate_thrust_controller.so
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/liblee_position_controller.so
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/fpvbot_control/roll_pitch_yawrate_thrust_controller_node
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/fpvbot_control/lee_position_controller_node
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/pkgconfig/fpvbot_control.pc
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/share/fpvbot_control/cmake/fpvbot_controlConfig-version.cmake
-Symlinking /home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/share/fpvbot_control/cmake/fpvbot_controlConfig.cmake
