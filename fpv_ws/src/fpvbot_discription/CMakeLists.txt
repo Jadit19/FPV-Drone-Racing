@@ -11,13 +11,14 @@ add_definitions(-std=c++11)
 ## is used, also find other catkin packages
 find_package(gazebo REQUIRED)
 find_package(PythonInterp REQUIRED)
+find_package(OpenCV REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
 )
 
 ## System dependencies are found with CMake's conventions
-find_package(catkin REQUIRED COMPONENTS gazebo_msgs geometry_msgs mav_msgs roscpp sensor_msgs)
+find_package(catkin REQUIRED COMPONENTS gazebo_msgs geometry_msgs mav_msgs roscpp sensor_msgs image_transport cv_bridge cv_camera message_generation std_msgs) # image_transport cv_bridge cv_camera opencv2 message_runtime
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -50,11 +51,12 @@ find_package(catkin REQUIRED COMPONENTS gazebo_msgs geometry_msgs mav_msgs roscp
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
+add_message_files(
+  FILES
+  data.msg
 #   Message1.msg
 #   Message2.msg
-# )
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -71,10 +73,10 @@ find_package(catkin REQUIRED COMPONENTS gazebo_msgs geometry_msgs mav_msgs roscp
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -115,6 +117,13 @@ catkin_package(
     geometry_msgs
     mav_msgs
     sensor_msgs
+    cv_camera
+    image_transport
+    cv_bridge
+    # opencv2
+    # message_generation
+    message_runtime
+    std_msgs
 #  DEPENDS system_lib
 )
 
@@ -123,10 +132,11 @@ catkin_package(
 ###########
 
 ## Specify additional locations of header files
-## Your package locations should be listed before other locations
+##  ${OpenCV_INCLUDE_DIRS}Your package locations should be listed before other locations
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -225,6 +235,14 @@ add_dependencies(waypoint_publisher_file ${catkin_EXPORTED_TARGETS})
 add_executable(hovering_example src/hovering_example.cpp)
 target_link_libraries(hovering_example ${catkin_LIBRARIES})
 add_dependencies(hovering_example ${catkin_EXPORTED_TARGETS})
+
+add_executable(image_converter src/image_converter.cpp)
+target_link_libraries(image_converter ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
+add_dependencies(image_converter ${catkin_EXPORTED_TARGETS})
+
+add_executable(cv_controller src/cv_controller.cpp)
+target_link_libraries(cv_controller ${catkin_LIBRARIES})
+add_dependencies(cv_controller ${catkin_EXPORTED_TARGETS})
 
 foreach(dir launch models resource worlds)
    install(DIRECTORY ${dir}/

@@ -179,17 +179,43 @@
                 <technique sid="COMMON">
                     <lambert>
                          <ambient>
-                            <color>1.0000000 0.2500000 0.2500000 1.0000000</color>
-                        </ambient>
-                        <!-- <diffuse>
                             <color>1.0000000 0.0000000 0.0000000 1.0000000</color>
-                        </diffuse> -->
+                        </ambient>
+                        <diffuse>
+                            <color>1.0000000 0.0000000 0.0000000 1.0000000</color>
+                        </diffuse>
+                        <specular>
+                            <color>0.0000000 0.0000000 0.0000000 0.0000000</color>
+                        </specular>
+                        <emissive>
+                            <color>0.0000000 0.0000000 0.0000000 1.0000000</color>
+                        </emissive>
                     </lambert>
                 </technique>
             </profile_COMMON>
         </effect>
     </library_effects>
-    
+    <library_materials>
+        <material id="ID101" name="material_4">
+            <instance_effect url="#ID102" />
+        </material>
+    </library_materials>
+    <library_effects>
+        <effect id="ID102">
+            <profile_COMMON>
+                <technique sid="COMMON">
+                    <lambert>
+                        <ambient>
+                            <color>0.0000000 0.0000000 0.0000000 1.0000000</color>
+                        </ambient>
+                        <diffuse>
+                            <color>0.0000000 0.0000000 0.0000000 1.0000000</color>
+                        </diffuse>
+                    </lambert>
+                </technique>
+            </profile_COMMON>
+        </effect>
+    </library_effects>
     <scene>
         <instance_visual_scene url="#ID2" />
     </scene>

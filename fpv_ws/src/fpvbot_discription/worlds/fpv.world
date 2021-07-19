@@ -1,9 +1,26 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
-    <model name='iROS2016 Track'>
+    <model name='iROS2016 Track_0'>
         <link name='gate_08'>
-          <pose frame=''>12.5 0 0 0 0 1.5707</pose>
+          <pose frame=''>12.5 4 0 0 0 1.5707</pose>
+          <visual name='visual'>
+            <geometry>
+              <mesh>
+                <uri>/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
+              </mesh>
+            </geometry>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <static>1</static>
+        <allow_auto_disable>1</allow_auto_disable>
+      </model>
+      <model name='iROS2016 Track_1'>
+        <link name='gate_08'>
+          <pose frame=''>5 0 -1 0 0 1.5707</pose>
           <visual name='visual'>
             <geometry>
               <mesh>
