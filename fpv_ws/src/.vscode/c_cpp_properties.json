@@ -17,7 +17,9 @@
                 "/home/jadit19/ros/rotors_ws/src/rotors_simulator/rotors_hil_interface/include/**",
                 "/home/jadit19/ros/rotors_ws/src/rotors_simulator/rotors_joy_interface/include/**",
                 "/home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/**",
-                "/usr/include/**"
+                "/usr/include/**",
+                "/opt/ros/melodic/include",
+                "/home/jadit19/FPV-Drone-Racing/fpv_ws/devel/.private/fpvbot_discription/include"
             ],
             "name": "ROS"
         }

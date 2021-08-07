@@ -16,9 +16,10 @@ std::vector<cv::Vec4i> hierarchy;
 std::vector<cv::Point> pts(4);
 cv::Scalar whiteColor = cv::Scalar(255,255,255);
 cv::Mat drawing, red_filtered;
-int maxHullIndex, secondMaxHullIndex;
-float biggestContourArea, ctArea;
 fpvbot_discription::data msg;
+int maxHullIndex;
+int secondMaxHullIndex;
+float biggestContourArea = 0, ctArea;
 
 void drawOnImage(cv::Mat &image, const std::vector<cv::Point> &points, cv::Scalar blueColor= cv::Scalar(255,255,255), int radius=3, int thickness=2) {
 
@@ -40,6 +41,8 @@ void drawOnImage(cv::Mat &image, const std::vector<cv::Point> &points, cv::Scala
     msg.x = center.x;
     msg.y = center.y;
     msg.distance = sqrt(pow((pts[0].x - center.x), 2) + pow(pts[0].y - center.y, 2));
+    msg.xDist = sqrt(pow(pts[0].x-pts[1].x, 2) + pow(pts[0].y-pts[1].y, 2));
+    msg.yDist = sqrt(pow(pts[1].x-pts[2].x, 2) + pow(pts[1].y-pts[2].y, 2));
 
     return;
 }
@@ -71,24 +74,26 @@ void imageCb(const sensor_msgs::ImageConstPtr& msg){
     //! Drawing the Convex Hull with maximum area..
     drawing = cv::Mat::zeros(red_filtered.size(), CV_8UC3);
     cv::cvtColor(drawing, drawing, CV_BGR2GRAY);
-    int maxHullIndex = hull.size()-1;
-    int secondMaxHullIndex = hull.size()-1;
-    float biggestContourArea = 0, ctArea;
+    maxHullIndex = hull.size()-1;
+    secondMaxHullIndex = hull.size()-1;
+    biggestContourArea = 0;
 
-    // for (int i=0; i<contours.size(); i++){
+    for (int i = contours.size()-1; i>=0; i--){
 
-    //     //! Finding the hull with maximum area 
-    //     ctArea = cv::contourArea(hull[i]);
-    //     if (ctArea > biggestContourArea){
-    //         biggestContourArea = ctArea;
-    //         secondMaxHullIndex = maxHullIndex;
-    //         maxHullIndex = i;
-    //     }
+        //! Finding the hull with maximum area 
+        ctArea = cv::contourArea(hull[i]);
+        if (ctArea > biggestContourArea){
+            biggestContourArea = ctArea;
+            secondMaxHullIndex = maxHullIndex;
+            maxHullIndex = i;
+        }
 
-    //     // cv::drawContours(drawing, hull, i, whiteColor, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
-    // }
-    cv::drawContours(drawing, hull, contours.size() -1, whiteColor, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
+        // cv::drawContours(drawing, hull, i, whiteColor, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
+    }
+
+    cv::drawContours(drawing, hull, secondMaxHullIndex, whiteColor, 1, 8, std::vector<cv::Vec4i>(), 0, cv::Point());
     cv::GaussianBlur(drawing, drawing, cv::Size(5,5), 0);
+    
     //! Getting edge points..
     cv::goodFeaturesToTrack(drawing, pts, 4, 0.01, 10);
 
@@ -109,7 +114,7 @@ void imageCb(const sensor_msgs::ImageConstPtr& msg){
 }
 
 int main(int argc, char** argv){
-    ros::init(argc, argv, "image_converter1");
+    ros::init(argc, argv, "image_converter");
     ros::NodeHandle nh;
 
     ros::Subscriber image_sub_ = nh.subscribe("/iris/camera_red_iris/image_raw", 30, imageCb);

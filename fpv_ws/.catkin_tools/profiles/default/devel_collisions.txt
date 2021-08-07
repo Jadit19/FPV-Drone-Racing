@@ -1,2 +1,0 @@
-/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/./cmake.lock 128
-/home/jadit19/FPV-Drone-Racing/fpv_ws/devel/./cmake.lock 57

@@ -1,8 +1,0 @@
-{
-    "python.autoComplete.extraPaths": [
-        "/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/devel/lib/python2.7/dist-packages",
-        "/home/adi/ros/rotors_ws/devel/lib/python2.7/dist-packages",
-        "/media/adi/Adi/Aerial_Robotics/Tutorial/devel/lib/python2.7/dist-packages",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
-}

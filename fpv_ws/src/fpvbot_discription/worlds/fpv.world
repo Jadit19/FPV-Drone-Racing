@@ -1,15 +1,21 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
-    <model name='iROS2016 Track_0'>
+    <model name='iROS2016 Track'>
         <link name='gate_08'>
-          <pose frame=''>12.5 4 0 0 0 1.5707</pose>
+          <pose frame=''>10 0 0 0 0 1.5707</pose>
           <visual name='visual'>
             <geometry>
               <mesh>
-                <uri>/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
+                <uri>/home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
               </mesh>
             </geometry>
+            <material>
+              <ambient>1 0 0 1</ambient>
+              <diffuse>1 0 0 1</diffuse>
+              <specular>1 0 0 0</specular>
+              <emissive>1 0 0 1</emissive>
+            </material>
           </visual>
           <self_collide>0</self_collide>
           <enable_wind>0</enable_wind>
@@ -18,15 +24,22 @@
         <static>1</static>
         <allow_auto_disable>1</allow_auto_disable>
       </model>
-      <model name='iROS2016 Track_1'>
+
+      <model name='iROS2016 Track1'>
         <link name='gate_08'>
-          <pose frame=''>5 0 -1 0 0 1.5707</pose>
+          <pose frame=''>16 -6 1 0 0 0</pose>
           <visual name='visual'>
             <geometry>
               <mesh>
-                <uri>/home/adi/Aerial_Robotics/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
+                <uri>/home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
               </mesh>
             </geometry>
+            <material>
+              <ambient>1 0 0 1</ambient>
+              <diffuse>1 0 0 1</diffuse>
+              <specular>1 0 0 0</specular>
+              <emissive>1 0 0 1</emissive>
+            </material>
           </visual>
           <self_collide>0</self_collide>
           <enable_wind>0</enable_wind>
@@ -35,6 +48,55 @@
         <static>1</static>
         <allow_auto_disable>1</allow_auto_disable>
       </model>
+
+      <model name='iROS2016 Track2'>
+        <link name='gate_08'>
+          <pose frame=''>10 -12 0 0 0 1.5707</pose>
+          <visual name='visual'>
+            <geometry>
+              <mesh>
+                <uri>/home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <ambient>1 0 0 1</ambient>
+              <diffuse>1 0 0 1</diffuse>
+              <specular>1 0 0 0</specular>
+              <emissive>1 0 0 1</emissive>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <static>1</static>
+        <allow_auto_disable>1</allow_auto_disable>
+      </model>
+
+      <model name='iROS2016 Track3'>
+        <link name='gate_08'>
+          <pose frame=''>4 -6 -1 0 0 0</pose>
+          <visual name='visual'>
+            <geometry>
+              <mesh>
+                <uri>/home/jadit19/FPV-Drone-Racing/fpv_ws/src/fpvbot_discription/meshes/08.dae</uri>
+              </mesh>
+            </geometry>
+            <material>
+              <ambient>1 0 0 1</ambient>
+              <diffuse>1 0 0 1</diffuse>
+              <specular>1 0 0 0</specular>
+              <emissive>1 0 0 1</emissive>
+            </material>
+          </visual>
+          <self_collide>0</self_collide>
+          <enable_wind>0</enable_wind>
+          <kinematic>0</kinematic>
+        </link>
+        <static>1</static>
+        <allow_auto_disable>1</allow_auto_disable>
+      </model>
+
     <light name='sun' type='directional'>
         <cast_shadows>1</cast_shadows>
         <pose frame=''>0 0 10 0 -0 0</pose>

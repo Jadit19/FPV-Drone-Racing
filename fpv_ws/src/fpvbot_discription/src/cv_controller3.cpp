@@ -17,11 +17,10 @@
 
 //! Defining global variables.. 
 geometry_msgs::PoseStamped position;
-// trajectory_msgs::MultiDOFJointTrajectory movement;
 tf2::Quaternion setQuat;
 bool flagX=1, flagY=1;
-int choice=1, posError=20, cnt=160, angleTurn=30, mult=1, turn=0;
-double velGain=0.01, roll=0, pitch=0, yaw=0;        //-0.05
+int choice=1, posError=20, cnt=90, angleTurn=30;
+double velGain=0.01, roll=0, pitch=0, yaw=-0.05, xArea, yArea, rectArea;
 
 // double calcDepth(){
 
@@ -37,59 +36,64 @@ void subCallback(fpvbot_discription::data msg){
 
     switch (currentState){
         case DETECT:
+            if (msg.x>400+posError || msg.x<400-posError){
+                if (400 > msg.x)
+                    position.pose.position.y += 0.015;
+                else
+                    position.pose.position.y -= 0.015;
+                flagX = 0;
+            }
             if (msg.y>400+posError || msg.y<400-posError){
-                if (400>msg.y){
-                    position.pose.position.z += velGain;
-                } else {
-                    position.pose.position.z -= velGain;
-                }
-                flagY=0;
+                if (400 > msg.y)
+                    position.pose.position.z += 0.015;
+                else
+                    position.pose.position.z -= 0.015;
+                flagY = 0;
             }
-            if (msg.x>400+posError || msg.x<400-posError){ 
-                if (400 > msg.x){
-                    position.pose.position.x -= velGain*sin(yaw);
-                    position.pose.position.y += velGain*cos(yaw);
-                } else {
-                    position.pose.position.x += velGain*sin(yaw);
-                    position.pose.position.y -= velGain*cos(yaw);
-                }
-                flagX=0;
-            }
+            position.pose.position.x += 0.01;
             if (flagX && flagY){
-                mult = 2;
+                position.pose.position.x += 0.02;
             }
-            position.pose.position.x += mult*velGain*cos(yaw);
-            position.pose.position.y += mult*velGain*sin(yaw);
-            if (msg.distance>180 && flagX && flagY){
-                currentState = PASS;
-            }
-            mult = 1;
             flagX = 1;
             flagY = 1;
+            if (msg.distance>150){
+                currentState = PASS;
+            }
             break;
         
         case PASS:
-            position.pose.position.x += 3*velGain*cos(yaw);
-            position.pose.position.y += 3*velGain*sin(yaw);
+            position.pose.position.x += 0.03;
             cnt--;
-            if (cnt<0){
-                cnt = 160;
+            if (cnt<=0){
+                cnt = 90;
                 currentState = ROTATE;
             }
             break;
 
         case ROTATE:
-            yaw -= 0.05;
             setQuat.setRPY(roll, pitch, yaw);
             position.pose.orientation.w = setQuat.getW();
             position.pose.orientation.x = setQuat.getX();
             position.pose.orientation.y = setQuat.getY();
             position.pose.orientation.z = setQuat.getZ();
-            if (yaw <= (-1.50 + turn*1.5707)){
+            yaw -= 0.05;
+
+            position.pose.position.x += 0.02;
+
+            rectArea = msg.xDist*msg.yDist;
+            xArea = msg.xDist*msg.xDist;
+            yArea = msg.yDist*msg.yDist;
+
+            // if (msg.xDist>100 && msg.yDist>100){
+            //     yaw = -0.1;
+            //     currentState = DETECT;
+            // }
+
+            if (rectArea>=std::min(xArea,yArea) && rectArea<=std::max(xArea,yArea) && rectArea>2500){
+                yaw = -0.05;
                 currentState = DETECT;
-                turn -= 1;
-                yaw = turn*1.5707;
             }
+
             break;
     }
 
