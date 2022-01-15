@@ -22,6 +22,7 @@ catkin build
 ```
 
 Don't forget to source it before launching the project:
+
 ```sh
 source devel/setup.bash
 ```
@@ -30,3 +31,4 @@ Great! Now launch the drone using:
 ```sh
 roslaunch fpvbot_discription mav_hovering_example.launch
 ```
+https://user-images.githubusercontent.com/74911409/149631888-3a2e2e66-4ac8-4794-9ef9-ee58f7505326.mp4
