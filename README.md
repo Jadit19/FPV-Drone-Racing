@@ -19,9 +19,6 @@ Now, initialize a catkin workspace inside the ``fpv_ws`` folder and build it via
 cd FPV-Drone-Racing/fpv_ws
 catkin init
 catkin build
-
-
-
 ```
 
 Don't forget to source it before launching the project:
